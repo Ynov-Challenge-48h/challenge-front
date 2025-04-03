@@ -11,7 +11,6 @@
 ### Organisation des branches
 1. **Branches principales** :
    - **`main`** : Branche principale représentant l'environnement de **préproduction**.
-   - **`staging`** : Branche dédiée aux tests et validations.
 
 2. **Branches de travail** :
    - Préfixées selon le domaine :
