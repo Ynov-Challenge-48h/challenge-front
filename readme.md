@@ -11,7 +11,6 @@
 ### Organisation des branches
 1. **Branches principales** :
    - **`main`** : Branche principale représentant l'environnement de **préproduction**.
-   - **`staging`** : Branche dédiée aux tests et validations.
 
 2. **Branches de travail** :
    - Préfixées selon le domaine :
@@ -45,3 +44,4 @@ l'app doit pouvoir :
 - Sélectionner une personne physique présente dans ce dossier client
 - Appeler une API pour venir passer en paramètre
 - Prendre en photo sa carte d’identité: la détourer, remettre à plat, etc., 
+ 
