@@ -1,6 +1,7 @@
 import 'package:app_challenge_48h/app-bar/app_bar.dart';
 import 'package:app_challenge_48h/scan-cni/scan_cni.dart';
 import 'package:app_challenge_48h/theme/app_colors.dart';
+import 'package:app_challenge_48h/nav-bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class ClientInfoPage extends StatelessWidget {
@@ -67,17 +68,17 @@ class ClientInfoPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const HomePage()),
-                  );                               
+                  );
                 },
                 icon: const Icon(Icons.camera_alt),
                 label: const Text("Scan Card"),
-                // style: Color(AppColors.yellow),
               ),
             ),
           ],
         ),
       ),
-        backgroundColor: AppColors.whiteBg,
+      bottomNavigationBar: Navbar(),  // Add your Navbar here
+      backgroundColor: AppColors.whiteBg,
     );
   }
 }
