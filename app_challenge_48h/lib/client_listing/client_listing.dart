@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:app_challenge_48h/app-bar/app_bar.dart';
 import 'package:app_challenge_48h/client-infos/client_infos.dart';
 import 'package:app_challenge_48h/nav-bar/nav_bar.dart';
 import 'package:app_challenge_48h/theme/app_colors.dart';
@@ -79,9 +80,7 @@ class _ClientListScreenState extends State<ClientListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Clients'),
-      ),
+      appBar: CustomAppBar(),
       body: Column(
         children: [
           // Search bar + dropdown filter in a row
@@ -197,7 +196,7 @@ class ClientDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(clientName)),
+      appBar: CustomAppBar(),
       body: Center(
         child: Text(
           'Details for $clientName',
