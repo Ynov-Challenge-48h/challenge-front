@@ -38,18 +38,9 @@ class LoginForm extends StatelessWidget {
             TextFormField(
               controller: emailController,
               decoration: InputDecoration(
-                labelText: 'Adresse e-mail',
+                labelText: 'Email',
                 border: OutlineInputBorder(),
               ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Veuillez entrer votre adresse e-mail';
-                }
-                if (!RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$").hasMatch(value)) {
-                  return 'Adresse e-mail invalide';
-                }
-                return null;
-              },
             ),
             const SizedBox(height: 16),
 
@@ -57,15 +48,9 @@ class LoginForm extends StatelessWidget {
               controller: passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Mot de passe',
+                labelText: 'Password',
                 border: OutlineInputBorder(),
               ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Veuillez entrer votre mot de passe';
-                }
-                return null;
-              },
             ),
             const SizedBox(height: 20),
 
@@ -82,7 +67,7 @@ class LoginForm extends StatelessWidget {
                 textStyle: const TextStyle(fontSize: 20),
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
-              child: const Text('Se connecter'),
+              child: const Text('Connect'),
             ),
           ],
         ),
