@@ -1,8 +1,7 @@
 import 'package:app_challenge_48h/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:app_challenge_48h/client_listing/client_listing.dart'; // Import for Client List screen
-import 'package:app_challenge_48h/login/login.dart'; // Import for Login screen
-import 'package:app_challenge_48h/settings/settings.dart'; // Import for Settings screen
+import 'package:app_challenge_48h/client_listing/client_listing.dart'; 
+import 'package:app_challenge_48h/settings/settings.dart'; 
 
 class Navbar extends StatefulWidget {
   @override
