@@ -44,4 +44,8 @@ l'app doit pouvoir :
 - Sélectionner une personne physique présente dans ce dossier client
 - Appeler une API pour venir passer en paramètre
 - Prendre en photo sa carte d’identité: la détourer, remettre à plat, etc., 
+
+## pour lancer le projet
+pour les imports : flutter pub get
+pour run : flutter run
  
