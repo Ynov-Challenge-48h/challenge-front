@@ -8,15 +8,14 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>with WidgetsBindingObserver {
+class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
   List<CameraDescription> cameras = [];
   CameraController? cameraController;
-   
+
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    if (cameraController == null || 
-        cameraController?.value.isInitialized == false) {
+    if (cameraController == null || cameraController?.value.isInitialized == false) {
       return;
     }
 
@@ -63,7 +62,8 @@ class _HomePageState extends State<HomePage>with WidgetsBindingObserver {
           IconButton(
             onPressed: () async {
               XFile picture = await cameraController!.takePicture();
-              // Handle the captured image
+              // Return the image path to previous page
+              Navigator.pop(context, picture.path);
             },
             iconSize: 100,
             icon: const Icon(
@@ -76,7 +76,6 @@ class _HomePageState extends State<HomePage>with WidgetsBindingObserver {
       ),
     );
   }
-
 
   Future<void> _setupCameraController() async {
     List<CameraDescription> _cameras = await availableCameras();
@@ -102,5 +101,4 @@ class _HomePageState extends State<HomePage>with WidgetsBindingObserver {
       });
     }
   }
-
 }
