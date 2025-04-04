@@ -10,7 +10,8 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
-        backgroundColor: AppColors.orangeBorder,
+        backgroundColor: AppColors.whiteBg,
+        automaticallyImplyLeading: false,  
       ),
       body: const LoginForm(), 
       backgroundColor: AppColors.whiteBg, 
