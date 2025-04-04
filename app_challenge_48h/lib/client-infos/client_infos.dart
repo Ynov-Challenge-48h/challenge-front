@@ -67,7 +67,7 @@ class ClientInfoPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
+                    MaterialPageRoute(builder: (context) => const HomePage()), // sends to scan-cni
                   );
                 },
                 icon: const Icon(Icons.camera_alt),
@@ -77,7 +77,7 @@ class ClientInfoPage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Navbar(),  // Add your Navbar here
+      bottomNavigationBar: Navbar(),
       backgroundColor: AppColors.whiteBg,
     );
   }

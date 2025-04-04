@@ -1,7 +1,8 @@
+import 'package:app_challenge_48h/client_listing/client_listing.dart';
+import 'package:app_challenge_48h/nav-bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:app_challenge_48h/app-bar/app_bar.dart';
 import 'package:app_challenge_48h/theme/app_colors.dart';
-import 'package:app_challenge_48h/client-infos/client_infos.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +48,7 @@ class MyHomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ClientInfoPage()),
+                    MaterialPageRoute(builder: (context) => ClientListScreen()),
                   );
                 },
                 icon: const Icon(Icons.camera_alt),
@@ -57,7 +58,8 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: AppColors.whiteBg,
+      bottomNavigationBar: Navbar(),
+      backgroundColor: AppColors.whiteBg,    
     );
   }
 }

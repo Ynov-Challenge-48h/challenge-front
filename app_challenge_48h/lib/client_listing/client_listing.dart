@@ -1,4 +1,7 @@
 import 'dart:async';
+import 'package:app_challenge_48h/client-infos/client_infos.dart';
+import 'package:app_challenge_48h/nav-bar/nav_bar.dart';
+import 'package:app_challenge_48h/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ClientListingService {
@@ -162,6 +165,15 @@ class _ClientListScreenState extends State<ClientListScreen> {
                                     },
                                     child: const Text('View'),
                                   ),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => const ClientInfoPage()),
+                                      );
+                                    },
+                                    child: const Text('get clients infos'),
+                                  ),
                                 ],
                               ),
                             ),
@@ -171,6 +183,8 @@ class _ClientListScreenState extends State<ClientListScreen> {
           )
         ],
       ),
+      bottomNavigationBar: Navbar(),
+      backgroundColor: AppColors.whiteBg,
     );
   }
 }
