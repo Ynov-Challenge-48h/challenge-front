@@ -1,3 +1,4 @@
+import 'package:app_challenge_48h/theme/app_colors.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
@@ -60,17 +61,18 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
             ),
           ),
           IconButton(
-            onPressed: () async {
-              XFile picture = await cameraController!.takePicture();
-              // Return the image path to previous page
-              Navigator.pop(context, picture.path);
-            },
-            iconSize: 100,
-            icon: const Icon(
-              Icons.camera,
-              color: Colors.red,
+              onPressed: () async {
+                XFile picture = await cameraController!.takePicture();
+                // Return the image path to previous page
+                Navigator.pop(context, picture.path);
+              },
+              iconSize: 100,
+              icon: const Icon(
+                Icons.camera_alt, 
+                color: AppColors.yellow,  
+              ),
+              padding: EdgeInsets.all(16), 
             ),
-          ),
           const SizedBox(height: 20),
         ],
       ),
