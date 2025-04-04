@@ -1,5 +1,8 @@
 import 'package:app_challenge_48h/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:app_challenge_48h/client_listing/client_listing.dart'; // Import for Client List screen
+import 'package:app_challenge_48h/login/login.dart'; // Import for Login screen
+import 'package:app_challenge_48h/settings/settings.dart'; // Import for Settings screen
 
 class Navbar extends StatefulWidget {
   @override
@@ -13,6 +16,19 @@ class _NavbarState extends State<Navbar> {
     setState(() {
       _selectedIndex = index;
     });
+
+    // navigation 
+    if (index == 0) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => ClientListScreen()),
+      );
+    } else if (index == 1) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const SettingsPage()),
+      );
+    }
   }
 
   @override
