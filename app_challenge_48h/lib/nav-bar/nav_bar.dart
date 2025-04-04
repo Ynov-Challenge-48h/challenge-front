@@ -1,6 +1,5 @@
+import 'package:app_challenge_48h/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-
-Color selectcolor = Color(0xFFBA4118);
 
 class Navbar extends StatefulWidget {
   @override
@@ -18,20 +17,28 @@ class _NavbarState extends State<Navbar> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
+    return Container(
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(color: AppColors.orangeBorder, width: 1.5),
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          label: 'Settings',
-        ),
-      ],
-      selectedItemColor: selectcolor,
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
+      ),
+      child: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
+        selectedItemColor: AppColors.orangeBorder,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        backgroundColor: AppColors.whiteBg,
+      ),
     );
   }
 }
