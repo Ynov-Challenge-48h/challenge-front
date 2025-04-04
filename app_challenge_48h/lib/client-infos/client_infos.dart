@@ -36,7 +36,7 @@ class _ClientInfoPageState extends State<ClientInfoPage> {
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(5),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -61,7 +61,7 @@ class _ClientInfoPageState extends State<ClientInfoPage> {
                     height: 200,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     child: const Center(
                       child: Text('Client Image 1 Placeholder'),
@@ -83,7 +83,7 @@ class _ClientInfoPageState extends State<ClientInfoPage> {
                     height: 200,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     child: const Center(
                       child: Text('Client Image 2 Placeholder'),

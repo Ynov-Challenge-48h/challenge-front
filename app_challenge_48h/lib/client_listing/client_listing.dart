@@ -151,19 +151,19 @@ class _ClientListScreenState extends State<ClientListScreen> {
                                     client,
                                     style: const TextStyle(fontSize: 16),
                                   ),
-                                  ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              ClientDetailScreen(
-                                                  clientName: client),
-                                        ),
-                                      );
-                                    },
-                                    child: const Text('View'),
-                                  ),
+                                  // ElevatedButton( // not functionnal so removed it
+                                  //   onPressed: () {
+                                  //     Navigator.push(
+                                  //       context,
+                                  //       MaterialPageRoute(
+                                  //         builder: (context) =>
+                                  //             ClientDetailScreen(
+                                  //                 clientName: client),
+                                  //       ),
+                                  //     );
+                                  //   },
+                                  //   child: const Text('View'),
+                                  // ),
                                   ElevatedButton(
                                     onPressed: () {
                                       Navigator.push(
