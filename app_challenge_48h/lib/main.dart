@@ -19,47 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            const Center(
-              child: Text(
-                'Hello World',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
-            ),
-            const Spacer(),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ClientListScreen()),
-                  );
-                },
-                icon: const Icon(Icons.camera_alt),
-                label: const Text("Scan Card"),
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: Navbar(),
-      backgroundColor: AppColors.whiteBg,    
+      home: ClientListScreen(),
     );
   }
 }
